@@ -3,8 +3,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from core.models.base_models import eespnet, EESP
-from core.nn import _ConvBNPReLU, _BNPReLU
+from ...core.models.base_models import eespnet, EESP
+from ...core.nn import _ConvBNPReLU, _BNPReLU
 
 
 class ESPNetV2(nn.Module):

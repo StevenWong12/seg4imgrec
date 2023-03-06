@@ -97,7 +97,7 @@ class DeepLabV3Plus(nn.Module):
 class _DeepLabHead(nn.Module):
     def __init__(self, nclass, c1_channels=128, norm_layer=nn.BatchNorm2d, **kwargs):
         super(_DeepLabHead, self).__init__()
-        self.aspp = _ASPP(2048, [12, 24, 36], norm_layer=norm_layer, **kwargs)
+        self.aspp = _ASPP(2048, [12, 24, 36], norm_layer=norm_layer, norm_kwargs=None, **kwargs)
         self.c1_block = _ConvBNReLU(c1_channels, 48, 3, padding=1, norm_layer=norm_layer)
         self.block = nn.Sequential(
             _ConvBNReLU(304, 256, 3, padding=1, norm_layer=norm_layer),

@@ -3,9 +3,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from core.nn import _ConvBNReLU
-from core.models.segbase import SegBaseModel
-from core.models.fcn import _FCNHead
+from ...core.nn import _ConvBNReLU
+from ...core.models.segbase import SegBaseModel
+from ...core.models.fcn import _FCNHead
 
 __all__ = ['PSANet', 'get_psanet', 'get_psanet_resnet50_voc', 'get_psanet_resnet101_voc',
            'get_psanet_resnet152_voc', 'get_psanet_resnet50_citys', 'get_psanet_resnet101_citys',
